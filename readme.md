@@ -19,7 +19,7 @@ It is important to note that when the assumptions for parametric tests are met, 
 ## Features
 
 ### Measures of Central Tendancy (in progress)
-1. Median - find the middle value from a list of numeric data. The median is not as easily influenced by outliers.
+1. Median: Find the middle value from a list of numeric data. The median is not as easily influenced by outliers.
 2. Mode Calculation: Find the mode(s) of a dataset.
 3. Quartiles
 4. Percentiles
