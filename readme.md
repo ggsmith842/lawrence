@@ -12,8 +12,9 @@ Nonparametric Statistics is a branch of statistics that makes minimal assumption
 
 Nonparametric statistics are useful when:
 
-We have a small number of samples.
-We don't know the underlying distribution of the data.
+- We have a small number of samples.
+- We don't know the underlying distribution of the data.
+
 It is important to note that when the assumptions for parametric tests are met, nonparametric tests do not have as much statistical power. Therefore, parametric tests should be relied upon in such cases.
 
 ## Features
