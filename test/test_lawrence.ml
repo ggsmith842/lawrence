@@ -1,5 +1,5 @@
 open OUnit2
-open Lawrence.Measures
+open Lawrence.Statistics
 
 let tests = "test suite for measures" >::: [
   "empty" >:: (fun _ -> assert_raises (Invalid_argument "empty list") (fun () -> median []));

@@ -1,4 +1,4 @@
 (library
  (public_name lawrence)
- (modules measures)
+ (modules statistics)
  (name lawrence))
