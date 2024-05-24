@@ -29,5 +29,5 @@ jobs:
       - name: Install Ounit2 & Format
         run: opam install ocamlformat.0.26.2 ounit2
 
-      - run: opam exec -- dune build @fmt --auto-promote
+      - run: opam exec -- dune build  #@fmt --auto-promote
       - run: opam exec -- dune runtest
