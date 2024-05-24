@@ -1,3 +1,5 @@
+[![Tests](https://github.com/ggsmith842/lawrence/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ggsmith842/lawrence/actions/workflows/main.yml)
+
 <picture align="left">
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ggsmith842/lawrence/blob/main/static/Lawrence Banner.png">
   <img alt="Lawrence Logo" src="https://github.com/ggsmith842/lawrence/blob/main/static/Lawrence Banner.png">
