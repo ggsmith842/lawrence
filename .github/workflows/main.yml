@@ -1,7 +1,6 @@
 name: Builds, tests & co
 
 on:
-  pull_request:
   push:
 
 permissions: read-all
@@ -27,10 +26,8 @@ jobs:
 
       - run: opam install . --deps-only --with-test
       
-      - name: Install ocamlformat
+      - name: Install Ounit2 & Format
         run: opam install ocamlformat.0.26.2 ounit2
 
-      - run: opam exec -- dune build
-
+      - run: opam exec -- dune build @fmt --auto-promote
       - run: opam exec -- dune runtest
-      - run: opam exec -- dune fmt
