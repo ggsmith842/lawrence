@@ -1,4 +1,5 @@
 (* Contains median and mode functions *)
+exception NoMode of string 
 
 let data = [ 1; 2; 3; 4; 5; 6; 1 ]
 
@@ -18,19 +19,31 @@ let median data =
     else List.nth sorted_data (n / 2))
 ;;
 
+module Ints = Set.Make(Int);;
+
+(** [mode data] is the most frequent element of the elements in [data].
+    [data] must have length > 0. Returns an integer value *)
 let mode data =
-  let n = List.length data in
-  if data = []
-  then invalid_arg "empty list"
-  else (
-    let counter = Hashtbl.create n in
-    let update_counter x =
-      if Hashtbl.mem counter x
-      then (
-        let current_count = Hashtbl.find counter x in
-        Hashtbl.replace counter x (succ current_count))
-      else Hashtbl.replace counter x 1
+  match data with
+  | [] -> invalid_arg "empty list"
+  | _ ->
+    if List.length (Ints.to_list (Ints.of_list data)) = (List.length data) 
+      then   raise (NoMode "All elements are unique; no mode in data.")
+    else
+    let counter = Hashtbl.create (List.length data) in
+    List.iter
+      (fun x ->
+        Hashtbl.replace
+          counter
+          x
+          (1 + (Hashtbl.find_opt counter x |> Option.value ~default:0)))
+      data;
+    let max_key, _ =
+      Hashtbl.fold
+        (fun key count (max_key, max_count) ->
+          if count > max_count then key, count else max_key, max_count)
+        counter
+        (List.hd data, 0)
     in
-    List.iter update_counter data;
-    Hashtbl.to_seq counter |> List.of_seq)
+    max_key
 ;;
