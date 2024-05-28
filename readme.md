@@ -41,4 +41,4 @@ Bootstrap Methods: Implement bootstrap resampling techniques for estimating the 
 We welcome contributions from the community! If you find a bug or have a feature request, please open an issue on GitHub. To contribute code, fork the repository, create a new branch, and submit a pull request with your changes.
 
 ## License
-This library is licensed under the MIT License. See the LICENSE file for more details.
+This library is licensed under the MIT License. See the [LICENSE](https://github.com/ggsmith842/lawrence/blob/main/LICENSE) file for more details.
