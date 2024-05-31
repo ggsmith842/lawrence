@@ -5,19 +5,19 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github ggsmith842/lawrence))
 
-(authors "Author Name")
+(authors "ggsmith842")
 
-(maintainers "Maintainer Name")
+(maintainers "ggsmith842")
 
-(license LICENSE)
+(license MIT)
 
 (documentation https://url/to/documentation)
 
 (package
  (name lawrence)
- (synopsis "A short synopsis")
+ (synopsis "A library of nonparametric tests and statistics")
  (description "A longer description")
  (depends ocaml dune)
  (tags
