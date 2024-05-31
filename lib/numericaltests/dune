@@ -1,0 +1,4 @@
+(library
+ (name numericaltests)
+ (public_name lawrence.numericaltests)
+ (libraries lawrence.statistics))

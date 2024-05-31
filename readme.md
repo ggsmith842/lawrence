@@ -29,8 +29,9 @@ It is important to note that when the assumptions for parametric tests are met, 
 
 ### Statstical Tests (planned)
 Rank-based Tests: Perform nonparametric tests such as the Wilcoxon signed-rank test and the Mann-Whitney U test.
-1. Wilcoxon Signed-rank test
-2. Mann-Whitney U test
+1. Median test
+2. Wilcoxon Signed-rank test
+3. Mann-Whitney U test
 
 ### Resampling Methods (planned)
 Bootstrap Methods: Implement bootstrap resampling techniques for estimating the distribution of a statistic.
