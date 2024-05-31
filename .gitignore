@@ -30,3 +30,6 @@ _opam/
 
 # VS Code editor
 .vscode
+
+# Jet Brains
+.idea
