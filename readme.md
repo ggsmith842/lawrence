@@ -6,37 +6,33 @@
 </picture>
 
 ----
-# Nonparametric Statistics for Ocaml
+# Cmd Line Probability in Ocaml
 *Your success will be proportioned to the amount of mental effort you devote to it. - T.E. Lawrence*
 
 ## Overview
-Nonparametric Statistics is a branch of statistics that makes minimal assumptions about the data. One common reason to use np statistics is when the data does not follow a normal (Gaussian) distribution. The assumption that data is normally distributed is required for many parametric statistical tests, such as Linear Regression. Because of this, nonparametric statistics are often referred to as distribution-free statistics.
+Lawrence is a command-line tool focused on providing a quick way to compute values related to counting, probabilities, and sampling.
 
-Nonparametric statistics are useful when:
+## Purpose
+Provide a simple tool for those learning probability and statistics that can be executed in the terminal in an interactive session or as a standalone command.
 
-- We have a small number of samples.
-- We don't know the underlying distribution of the data.
-
-It is important to note that when the assumptions for parametric tests are met, nonparametric tests do not have as much statistical power. Therefore, parametric tests should be relied upon in such cases.
 
 ## Features
 
-### Measures of Central Tendancy (in progress)
-1. Median: Find the middle value from a list of numeric data. The median is not as easily influenced by outliers.
-2. Mode Calculation: Find the mode(s) of a dataset.
-3. Quartiles
-4. Percentiles
+### Counting Tools
+- `perm -n -k` Calculate Permutations P(n, k)
+- `comb -n -k` Calculate Combinations C(n, k)
+- `partitions -n` Find Partitions of an Integer n
 
-### Statstical Tests (planned)
-Rank-based Tests: Perform nonparametric tests such as the Wilcoxon signed-rank test and the Mann-Whitney U test.
-1. Median test
-2. Wilcoxon Signed-rank test
-3. Mann-Whitney U test
+### Sampling
+- `findn -m -p` Finding Sample Size for Estimating a Population Proportion
 
-### Resampling Methods (planned)
-Bootstrap Methods: Implement bootstrap resampling techniques for estimating the distribution of a statistic.
+### Random Variables
+- `expval(m, v)` Expected Value Calculation
 
-###
+### Probabilities
+- `single-event(a)` Compute the probability of a single event
+- `conditional(a, b)` <eventA> <eventB>  Calculate conditional probability P(A|B)
+- `joint(a, b)` <eventA> <eventB>        Compute joint probability P(A and B)
 
 ## Contributing
 We welcome contributions from the community! If you find a bug or have a feature request, please open an issue on GitHub. To contribute code, fork the repository, create a new branch, and submit a pull request with your changes.
