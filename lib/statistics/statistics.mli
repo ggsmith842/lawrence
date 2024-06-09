@@ -18,3 +18,10 @@ val str_mode : string list -> string
 
 (** Exception raised when there is no mode in the data. *)
 exception NoMode of string
+
+(** Calculate the expected value.
+    @param payout A list of payout values.
+    @param probability A list of probabilities.
+    @return The expected value.
+    @raise Failure if the lists have different lengths. *)
+val exp_val : float list -> float list -> float

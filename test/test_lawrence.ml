@@ -31,6 +31,12 @@ let mode_tests =
        ]
 ;;
 
+let exp_value_tests = 
+  "test suit for expected value"
+  >::: [
+    ("validArgs" >:: fun _ -> assert_equal 23. (exp_val [10.0;20.0;30.0] [0.1;0.5; 0.4]) )
+  ]
+
 
 let counting_tests = 
   "test suit for counting functions"
@@ -47,7 +53,7 @@ let counting_tests =
   ]
 ;;
 (* Full test suite *)
-let tests = "Full test suite" >::: [ median_tests; mode_tests; counting_tests ]
+let tests = "Full test suite" >::: [ median_tests; mode_tests; counting_tests; exp_value_tests ]
 
 (* Run test suite *)
 let _ = run_test_tt_main tests

@@ -78,3 +78,16 @@ let str_mode data =
       max_key)
 ;;
 
+(** [exp_val] is the expected value of a [payout]
+for a given [probability] list. Lists must be the same length.*)
+let exp_val payout probability =
+  try
+    let x = List.map2 ( *. ) payout probability in
+    List.fold_left (+.) 0.0 x
+  with 
+  | Invalid_argument _ -> failwith "List must be of the same length"
+
+;;
+  
+  
+
