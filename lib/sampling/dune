@@ -1,0 +1,3 @@
+(library
+ (name sampling)
+ (public_name lawrence.sampling))

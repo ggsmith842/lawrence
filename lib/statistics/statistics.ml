@@ -1,23 +1,21 @@
 (* Contains median and mode functions *)
 exception NoMode of string
 
-
 (** [median data] is the median of the elements of [data].
     An empty list will return None. *)
 let median data =
   let n = List.length data in
   if data = []
   then invalid_arg "empty list"
-  else 
+  else (
     let sorted_data = List.sort compare data in
     if n mod 2 = 0
-    then 
+    then (
       let mid1 = List.nth sorted_data ((n / 2) - 1) in
       let mid2 = List.nth sorted_data (n / 2) in
-      (mid1 +. mid2) /. 2.0
-    else List.nth sorted_data (n / 2)
+      (mid1 +. mid2) /. 2.0)
+    else List.nth sorted_data (n / 2))
 ;;
-
 
 module Ints = Set.Make (Int)
 
@@ -47,7 +45,6 @@ let mode data =
       in
       max_key)
 ;;
-
 
 module Strs = Set.Make (String)
 
@@ -79,15 +76,11 @@ let str_mode data =
 ;;
 
 (** [exp_val] is the expected value of a [payout]
-for a given [probability] list. Lists must be the same length.*)
+    for a given [probability] list. Lists must be the same length.*)
 let exp_val payout probability =
   try
     let x = List.map2 ( *. ) payout probability in
-    List.fold_left (+.) 0.0 x
-  with 
+    List.fold_left ( +. ) 0.0 x
+  with
   | Invalid_argument _ -> failwith "List must be of the same length"
-
 ;;
-  
-  
-
