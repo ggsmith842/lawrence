@@ -39,11 +39,14 @@ let exp_value_tests =
        ]
 ;;
 
-let sampling_tests = 
+let sampling_tests =
   "test suit for sampling"
-  >::: [
-    ("validCase" >:: fun _ -> assert_equal (Some 601) (find_sample_size 0.04 0.50 0.95))
-  ]
+  >::: [ ("validCase"
+          >:: fun _ -> assert_equal (Some 601) (find_sample_size 0.04 0.50 0.95)) ;
+          ("invalidArgCi" >:: fun _ -> assert_raises (Invalid_argument "Confidence level must be one of 0.99, 0.95, or 0.90") (fun () -> find_sample_size 0.04 0.50 0.80))
+
+       ]
+;;
 
 let counting_tests =
   "test suit for counting functions"
@@ -67,7 +70,8 @@ let counting_tests =
 
 (* Full test suite *)
 let tests =
-  "Full test suite" >::: [ median_tests; mode_tests; counting_tests; exp_value_tests; sampling_tests ]
+  "Full test suite"
+  >::: [ median_tests; mode_tests; counting_tests; exp_value_tests; sampling_tests ]
 ;;
 
 (* Run test suite *)

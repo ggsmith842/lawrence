@@ -1,9 +1,3 @@
 (test
  (name test_lawrence)
- (libraries 
-   ounit2
-   lawrence.statistics
-   lawrence.counting
-   lawrence.sampling
-  )
-)
+ (libraries ounit2 lawrence.statistics lawrence.counting lawrence.sampling))
